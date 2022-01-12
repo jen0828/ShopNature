@@ -30,10 +30,10 @@ function App() {
 
       <div className="jumbotron">
         <h1>SPRING COLLECTION</h1>
-
         <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
         <Button variant="secondary">Learn More</Button>{' '}
       </div>
+
       <br></br>
       <div className="container">
         <div className="row">
@@ -54,8 +54,6 @@ function App() {
           </div>
         </div>
       </div>
-
-
     </div>
   );
 }
