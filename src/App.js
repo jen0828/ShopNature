@@ -1,6 +1,6 @@
 import NavBar from './NavBar'
+import Jumbotron from './Jumbotron'
 import './App.css';
-import { Button } from 'react-bootstrap';
 import React, { useState } from 'react'
 import Data from './data.js'
 import { BrowserRouter as Router, Route, Switch, Routes } from 'react-router-dom';
@@ -12,30 +12,22 @@ function App() {
   return (
     <div className="App">
       <Router>
-      <Route exact path="/"> 
-      < NavBar/>
-
-      <div className="jumbotron">
-        <h1>SPRING COLLECTION</h1>
-        <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        <Button variant="secondary">Learn More</Button>{' '}
-      </div>
-  
-      </Route>
-      <Route exact path="/detail">
-        <div>Hello!</div>
-      </Route>
-      
-      <br></br>
-
-      <div className="container">
-        <div className="row">
-          {
-            products.map((a, i) => {
-              return <Card products={products[i]} i={i} key={i} />
-            })};
-        </div>
-      </div>
+        <Route exact path="/">
+          < NavBar />
+          <Jumbotron />
+          <br></br>
+            <div className="container">
+              <div className="row">
+                {
+                  products.map((a, i) => {
+                    return <Card products={products[i]} i={i} key={i} />
+                  })};
+              </div>
+            </div>
+        </Route>
+        <Route exact path="/detail">
+          <div>Detail Page!</div>
+        </Route> 
       </Router>
     </div>
 
