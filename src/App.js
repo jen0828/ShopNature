@@ -1,6 +1,3 @@
-import item from './item.jpg';
-import item1 from './item-1.jpg';
-import item2 from './item-2.jpg';
 import './App.css';
 import { Navbar, Container, Nav, NavDropdown, Button } from 'react-bootstrap';
 import React, { useState } from 'react'
@@ -45,7 +42,7 @@ function App() {
         <div className="row">
           {
             products.map((a, i) => {
-              return <Card products={products[i]} />
+              return <Card products={products[i]} i={i} />
             })};
         </div>
       </div>
@@ -57,7 +54,7 @@ function App() {
 function Card(props) {
   return (
     <div className="col-md-4">
-      <img src={item} width="100%" />
+      <img src={props.products.image} width="100%" alt='' />
       <h4>{props.products.title}</h4>
       <p>{props.products.content} & {props.products.price}</p>
     </div>
