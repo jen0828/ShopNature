@@ -43,14 +43,15 @@ function App() {
 
       <div className="container">
         <div className="row">
-          <Card products={products[0]} />
-          <Card products={products[1]} />
-          <Card products={products[2]} />
+          {
+            products.map((a, i) => {
+              return <Card products={products[i]} />
+            })};
         </div>
       </div>
 
     </div>
-  );
+  )
 }
 
 function Card(props) {
