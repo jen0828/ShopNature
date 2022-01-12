@@ -1,4 +1,5 @@
-import DetailPage from './ProductDetails'
+import ProductCard from './ProductCard'
+import ProductDetails from './ProductDetails'
 import NavBar from './NavBar'
 import Jumbotron from './Jumbotron'
 import './App.css';
@@ -21,13 +22,13 @@ function App() {
             <div className="row">
               {
                 products.map((a, i) => {
-                  return <Card products={products[i]} i={i} key={i} />
+                  return <ProductCard products={products[i]} i={i} key={i} />
                 })};
             </div>
           </div>
         </Route>
         <Route exact path="/detail/:id">
-          <DetailPage products={products} />
+          <ProductDetails products={products} />
         </Route>
       </Router>
     </div>
@@ -35,13 +36,4 @@ function App() {
   )
 }
 
-function Card(props) {
-  return (
-    <div className="col-md-4">
-      <img src={props.products.image} width="100%" alt='' />
-      <h4>{props.products.title}</h4>
-      <p>{props.products.content} & {props.products.price}</p>
-    </div>
-  )
-}
 export default App;
