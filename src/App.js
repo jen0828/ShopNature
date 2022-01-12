@@ -3,9 +3,12 @@ import item1 from './item-1.jpg';
 import item2 from './item-2.jpg';
 import './App.css';
 import { Navbar, Container, Nav, NavDropdown, Button } from 'react-bootstrap';
-
+import React, { useState } from 'react'
+import Data from './data.js'
 
 function App() {
+
+  let [products, setProducts] = useState(Data);
 
   return (
     <div className="App">
@@ -36,7 +39,7 @@ function App() {
         <Button variant="secondary">Learn More</Button>{' '}
       </div>
 
-      <br></br>
+      {/* <br></br>
       <div className="container">
         <div className="row">
           <div className="col-md-4">
@@ -55,9 +58,27 @@ function App() {
             <p>Detail</p>
           </div>
         </div>
+      </div> */}
+
+      <div className="container">
+        <div className="row">
+          <Card products={products}/>
+          <Card products={products}/>
+          <Card products={products}/>
+        </div>
       </div>
+
     </div>
   );
 }
 
+function Card(props){
+  return (
+    <div className="col-md-4">
+      <img src={item} width="100%" />
+      <h4>{ props.products[0].title }</h4>
+      <p>{ props.products[0].content } & { props.products[0].price }</p>
+    </div>
+  )
+}
 export default App;
