@@ -26,7 +26,7 @@ function App() {
             </div>
           </div>
         </Route>
-        <Route exact path="/detail">
+        <Route exact path="/detail/:id">
           <DetailPage products={products} />
         </Route>
       </Router>
