@@ -4,7 +4,7 @@ import Jumbotron from './Jumbotron'
 import './App.css';
 import React, { useState } from 'react'
 import Data from './data.js'
-import { BrowserRouter as Router, Route, Switch, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 function App() {
 
