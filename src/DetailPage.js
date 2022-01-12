@@ -1,4 +1,8 @@
+import { useHistory } from 'react-router-dom';
+
+
 export default function DetailPage() {
+  let history = useHistory();
   return (
     <div>
       <div className="container">
@@ -10,7 +14,8 @@ export default function DetailPage() {
             <h4 className="pt-5">Product</h4>
             <p>Details</p>
             <p>£60.00</p>
-            <button className="btn btn-danger">Order</button>
+            <button className="btn btn-secondary">Order</button>
+            <button onClick={()=>{ history.goBack() }} className="btn btn-secondary">Go back</button> 
           </div>
         </div>
       </div>
