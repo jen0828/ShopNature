@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <Router>
         <Route exact path="/">
-          < NavBar />
+          <NavBar />
           <Jumbotron />
           <br></br>
           <div className="container">
