@@ -1,15 +1,17 @@
-import product from './product.jpg';
-import product1 from './product-1.jpg';
-import product2 from './product-2.jpg';
+import item from './item.jpg';
+import item1 from './item-1.jpg';
+import item2 from './item-2.jpg';
 import './App.css';
 import { Navbar, Container, Nav, NavDropdown, Button } from 'react-bootstrap';
 
+
 function App() {
+
   return (
     <div className="App">
       <Navbar bg="light" expand="lg">
         <Container>
-          <Navbar.Brand href="#home">Organic Cosmetics</Navbar.Brand>
+          <Navbar.Brand href="#home">Natural Skincare</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
@@ -38,17 +40,17 @@ function App() {
       <div className="container">
         <div className="row">
           <div className="col-md-4">
-            <img src={product} width="100%" alt='' />
+            <img src={item} width="100%" alt='' />
             <h4>Product</h4>
             <p>Detail</p>
           </div>
           <div className="col-md-4">
-            <img src={product1} width="100%" alt='' />
+            <img src={item1} width="100%" alt='' />
             <h4>Product</h4>
             <p>Detail</p>
           </div>
           <div className="col-md-4">
-            <img src={product2} width="100%" alt='' />
+            <img src={item2} width="100%" alt='' />
             <h4>Product</h4>
             <p>Detail</p>
           </div>
