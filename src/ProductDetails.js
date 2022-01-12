@@ -1,7 +1,7 @@
 import { useHistory, useParams } from 'react-router-dom';
 
 
-export default function DetailPage(props) {
+export default function ProductDetails(props) {
   let { id } = useParams();
   let history = useHistory();
   let myProduct = props.products.find(function(product){

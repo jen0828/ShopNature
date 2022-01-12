@@ -1,4 +1,4 @@
-import DetailPage from './DetailPage'
+import DetailPage from './ProductDetails'
 import NavBar from './NavBar'
 import Jumbotron from './Jumbotron'
 import './App.css';
