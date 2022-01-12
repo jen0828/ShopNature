@@ -39,32 +39,13 @@ function App() {
         <Button variant="secondary">Learn More</Button>{' '}
       </div>
 
-      {/* <br></br>
-      <div className="container">
-        <div className="row">
-          <div className="col-md-4">
-            <img src={item} width="100%" alt='' />
-            <h4>Product</h4>
-            <p>Detail</p>
-          </div>
-          <div className="col-md-4">
-            <img src={item1} width="100%" alt='' />
-            <h4>Product</h4>
-            <p>Detail</p>
-          </div>
-          <div className="col-md-4">
-            <img src={item2} width="100%" alt='' />
-            <h4>Product</h4>
-            <p>Detail</p>
-          </div>
-        </div>
-      </div> */}
+      <br></br>
 
       <div className="container">
         <div className="row">
-          <Card products={products}/>
-          <Card products={products}/>
-          <Card products={products}/>
+          <Card products={products[0]} />
+          <Card products={products[1]} />
+          <Card products={products[2]} />
         </div>
       </div>
 
@@ -72,12 +53,12 @@ function App() {
   );
 }
 
-function Card(props){
+function Card(props) {
   return (
     <div className="col-md-4">
       <img src={item} width="100%" />
-      <h4>{ props.products[0].title }</h4>
-      <p>{ props.products[0].content } & { props.products[0].price }</p>
+      <h4>{props.products.title}</h4>
+      <p>{props.products.content} & {props.products.price}</p>
     </div>
   )
 }
