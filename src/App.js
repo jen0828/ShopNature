@@ -33,12 +33,11 @@ function App() {
         </Route>
       </Router>
 
-
       <button className="btn btn-secondary" onClick={() => {
 
-        axios.get('http://localhost:8000/products')
-          .then((result) => { console.log(result.data) })
-          .catch(() => { "error!" })
+        axios.get('http://localhost:8000/product')
+          .then((result) => { setProducts([...products, ...result.data]) })
+          .catch(() => { console.log('Errors!')})
 
       }}>See more</button>
     </div>
