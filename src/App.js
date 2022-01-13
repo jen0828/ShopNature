@@ -27,19 +27,22 @@ function App() {
                 })};
             </div>
           </div>
+
+          <button className="btn btn-secondary" onClick={() => {
+
+            axios.get('http://localhost:8000/products')
+              .then((result) => { setProducts([...products, ...result.data]) })
+              .catch(() => { console.log('Errors!') })
+
+          }}>See more</button>
+
         </Route>
         <Route exact path="/detail/:id">
           <ProductDetails products={products} />
         </Route>
       </Router>
 
-      <button className="btn btn-secondary" onClick={() => {
 
-        axios.get('http://localhost:8000/products')
-          .then((result) => { setProducts([...products, ...result.data]) })
-          .catch(() => { console.log('Errors!')})
-
-      }}>See more</button>
     </div>
 
   )
