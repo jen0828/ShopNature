@@ -1,3 +1,4 @@
+import Cart from './components/Cart';
 import ProductCard from './ProductCard';
 import ProductDetails from './ProductDetails';
 import NavBar from './NavBar';
@@ -7,6 +8,7 @@ import React, { useState } from 'react';
 import Data from './data.js';
 import axios from 'axios';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+
 
 function App() {
 
@@ -40,8 +42,11 @@ function App() {
         <Route exact path="/detail/:id">
           <ProductDetails products={products} />
         </Route>
-      </Router>
 
+        <Route path='/cart'>
+          <Cart></Cart>
+        </Route>
+      </Router>
 
     </div>
 
