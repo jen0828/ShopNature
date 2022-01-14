@@ -1,8 +1,8 @@
 import Cart from './components/Cart';
-import ProductCard from './ProductCard';
-import ProductDetails from './ProductDetails';
-import NavBar from './NavBar';
-import Jumbotron from './Jumbotron';
+import ProductCard from './components/ProductCard';
+import ProductDetails from './components/ProductDetails';
+import NavBar from './components/NavBar';
+import Jumbotron from './components/Jumbotron';
 import './App.css';
 import React, { useState } from 'react';
 import Data from './data.js';
