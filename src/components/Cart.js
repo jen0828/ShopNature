@@ -1,36 +1,36 @@
 import { Table } from 'react-bootstrap';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 function Cart(props) {
   return (
     <div>
       <div>
-  <Table responsive="sm">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Product</th>
-        <th>Quantity</th>
-        <th>Qty Change</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>{props.state[0].name}</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-      </tr>
-    </tbody>
-  </ Table>
-</div>
+        <Table responsive="sm">
+          <tr>
+            <th>#</th>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Qty Change</th>
+          </tr>
+          {props.state.map((a, i) => {
+            return (
+              <tr key={i}>
+                <td>{a.id}</td>
+                <td>{a.name}</td>
+                <td>{a.qty}</td>
+                <td><button onClick={() => { }}> + </button></td>
+              </tr>
+            )
+          })}
+        </ Table>
+      </div>
     </div>
   )
 }
 
-function mapStateToProps(state){
+function mapStateToProps(state) {
   return {
-    state : state
+    state: state
   }
 }
 
