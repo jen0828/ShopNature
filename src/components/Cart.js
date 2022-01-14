@@ -18,7 +18,8 @@ function Cart(props) {
                 <td>{a.id}</td>
                 <td>{a.name}</td>
                 <td>{a.qty}</td>
-                <td><button onClick={() => { }}> + </button></td>
+                <td><button onClick={() => { props.dispatch({ type: 'Qty increase' }) }}> + </button></td>
+                <td><button onClick={() => { props.dispatch({ type: 'Qty decrease' }) }}> - </button></td>
               </tr>
             )
           })}
