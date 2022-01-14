@@ -1,6 +1,7 @@
 import { Table } from 'react-bootstrap';
+import {connect} from 'react-redux';
 
-export default function Cart() {
+function Cart(props) {
   return (
     <div>
       <div>
@@ -16,7 +17,7 @@ export default function Cart() {
     <tbody>
       <tr>
         <td>1</td>
-        <td>Table cell</td>
+        <td>{props.state[0].name}</td>
         <td>Table cell</td>
         <td>Table cell</td>
       </tr>
@@ -26,3 +27,11 @@ export default function Cart() {
     </div>
   )
 }
+
+function mapStateToProps(state){
+  return {
+    state : state
+  }
+}
+
+export default connect(mapStateToProps)(Cart);
