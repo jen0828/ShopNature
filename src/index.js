@@ -4,11 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
 
+let store = createStore(()=>{ return [{id : 0, name : 'Organic Cream', qty : 2}]  })
 
 ReactDOM.render(
   <React.StrictMode>
+    <Provider store={store}>
       <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
