@@ -1,9 +1,14 @@
 
 
-let initialState = [{ id: 0, name: 'Organic Cream', qty: 2 }, { id: 1, name: 'Organic Oil', qty: 3 }];
+let initialState = [{ id: 0, name: 'Organic Cream', qty: 2 }];
 
 export default function reducer(state = initialState, action) {
-  if (action.type === 'Qty increase') {
+  if (action.type === 'Add to Basket') {
+    let copy = [...state];
+    copy.push(action.payload);
+    return copy;
+
+  } else if (action.type === 'Qty increase') {
 
     let copy = [...state];
     copy[0].qty++;
