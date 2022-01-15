@@ -1,4 +1,4 @@
-import { Table } from 'react-bootstrap';
+import { Table, Alert, Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
 
 function Cart(props) {
@@ -24,6 +24,12 @@ function Cart(props) {
             )
           })}
         </ Table>
+        <Alert variant="success">
+          <p>
+            20% discount offer ends today
+          </p>
+          <Button variant="success">Close me</Button>{' '}
+        </Alert>
       </div>
     </div>
   )
