@@ -29,7 +29,7 @@ function ProductDetails(props) {
               <button className="btn btn-secondary">Order</button>
               <button onClick={() => { history.goBack() }} className="btn btn-secondary">Go back</button>
               <button onClick={() => {
-                props.dispatch({ type: 'Add to Basket', payload: { id: myProduct.id, name: myProduct.title, qty: 1 } })
+                props.dispatch({ type: 'Add to Basket', data: { id: myProduct.id, name: myProduct.title, qty: 1 } })
                 history.push('/cart');
 
               }}>Add to Basket</button>
