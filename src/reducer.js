@@ -1,6 +1,6 @@
 
 
-let initialState = [{ id: 0, name: 'Organic Cream', qty: 2 }];
+let initialState = [{ id: 0, name: 'Organic Cream', qty: 2 }, { id: 1, name: 'Organic Oil', qty: 3 }];
 
 export default function reducer(state = initialState, action) {
   if (action.type === 'Qty increase') {
@@ -19,3 +19,5 @@ export default function reducer(state = initialState, action) {
     return state
   }
 }
+
+

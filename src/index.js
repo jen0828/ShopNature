@@ -5,30 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
 import reducer from './reducer.js';
+import reducer2 from './reducer2.js';
+import {createStore, combineReducers} from 'redux';
 
-
-// let initialState = [{ id: 0, name: 'Organic Cream', qty: 2 }];
-
-// function reducer(state = initialState, action) {
-//   if (action.type === 'Qty increase') {
-
-//     let copy = [...state];
-//     copy[0].qty++;
-//     return copy
-
-//   } else if (action.type === 'Qty decrease') {
-
-//     let copy = [...state];
-//     copy[0].qty--;
-//     return copy
-
-//   } else {
-//     return state
-//   }
-// }
-let store = createStore(reducer);
+let store = createStore( combineReducers({reducer, reducer2}) )
 
 ReactDOM.render(
   <React.StrictMode>
