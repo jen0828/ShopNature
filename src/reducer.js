@@ -11,13 +11,13 @@ export default function reducer(state = initialState, action) {
   } else if (action.type === 'Qty increase') {
 
     let copy = [...state];
-    copy[0].qty++;
+    copy[action.data].qty++;
     return copy
 
   } else if (action.type === 'Qty decrease') {
 
     let copy = [...state];
-    copy[0].qty--;
+    copy[action.data].qty--;
     return copy
 
   } else {
