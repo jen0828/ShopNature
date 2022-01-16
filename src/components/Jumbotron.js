@@ -5,7 +5,7 @@ export default function Jumbotron() {
     
       <div className="jumbotron">
         <h1>SPRING COLLECTION</h1>
-        <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <p>Find your new natural routine with our vegan face care range. It's time to Evolve your face skincare routine.</p>
         <Button variant="secondary">Learn More</Button>{' '}
       </div>
     
