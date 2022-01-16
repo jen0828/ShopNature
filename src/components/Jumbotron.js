@@ -1,6 +1,5 @@
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import ProductCard from './ProductCard';
 
 export default function Jumbotron() {
   return (
