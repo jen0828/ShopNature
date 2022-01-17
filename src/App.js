@@ -4,6 +4,7 @@ import ProductDetails from './components/ProductDetails';
 import NavBar from './components/NavBar';
 import Jumbotron from './components/Jumbotron';
 import './App.css';
+import { Button } from 'react-bootstrap';
 import React, { useState } from 'react';
 import Data from './data.js';
 import axios from 'axios';
@@ -30,13 +31,13 @@ function App() {
             </div>
           </div>
 
-          <button className="btn btn-secondary" onClick={() => {
+          <Button variant="outline-dark" size="lg" onClick={() => {
 
             axios.get('http://localhost:8000/products')
               .then((result) => { setProducts([...products, ...result.data]) })
               .catch(() => { console.log('Errors!') })
 
-          }}>See more</button>
+          }}>Click me to see more</Button>{' '}
 
         </Route>
         <Route exact path="/detail/:id">
