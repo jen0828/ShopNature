@@ -35,7 +35,7 @@ function Cart(props) {
         {props.alertOpen === true
           ? (<Alert variant="success">
             <p>20% discount offer ends today</p>
-            <Button variant="success" onClick={() => { props.dispatch({ type: 'Close Alert' }) }}>Close me</Button>
+            <Button variant="success" onClick={() => { props.dispatch({ type: 'Close Alert' }) }}>Close me !</Button>
           </Alert>)
           : null
         }

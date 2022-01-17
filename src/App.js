@@ -31,7 +31,7 @@ function App() {
             </div>
           </div>
 
-          <Button variant="outline-dark" size="lg" onClick={() => {
+          <Button className="color" variant="outline-light" size="lg" onClick={() => {
 
             axios.get('http://localhost:8000/products')
               .then((result) => { setProducts([...products, ...result.data]) })
