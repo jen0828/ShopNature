@@ -38,7 +38,7 @@ function App() {
               .then((result) => { setProducts([...products, ...result.data]) })
               .catch(() => { console.log('Errors!') })
 
-          }}>Click me to see more</Button>{' '}
+          }}>Click me to load more</Button>{' '}
 
         </Route>
         <Route exact path="/detail/:id">
