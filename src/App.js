@@ -7,6 +7,7 @@ import './App.css';
 import { Button } from 'react-bootstrap';
 import React, { useState } from 'react';
 import Data from './data.js';
+import LearnMore from './components/LearnMore';
 import axios from 'axios';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
@@ -46,6 +47,10 @@ function App() {
 
         <Route path='/cart'>
           <Cart></Cart>
+        </Route>
+
+        <Route path='/learnmore'>
+          <LearnMore></LearnMore>
         </Route>
       </Router>
 
