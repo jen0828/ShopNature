@@ -1,6 +1,6 @@
 
 
-let initialState = [{ id: 0, name: 'Organic Cream', qty: 2 }];
+let initialState = [{ id: 0, name: 'NATURAL ORGANIC CREAM', qty: 1 }];
 
 export default function reducer(state = initialState, action) {
 
