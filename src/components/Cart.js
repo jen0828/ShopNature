@@ -1,10 +1,11 @@
 import { Table, Alert, Button } from 'react-bootstrap';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 function Cart(props) {
 
   let state = useSelector((state) => state)
   console.log(state.reducer)
+  let dispatch = useDispatch()
 
   return (
     <div>
@@ -27,9 +28,9 @@ function Cart(props) {
                   <td>{a.qty}</td>
                   <td>
                     <button type="button" className="btn btn-success"
-                      onClick={() => { props.dispatch({ type: 'Qty increase', data: a.id }) }}> + </button>{' '}
+                      onClick={() => { dispatch({ type: 'Qty increase', data: a.id }) }}> + </button>{' '}
                     <button type="button" className="btn btn-success"
-                      onClick={() => { props.dispatch({ type: 'Qty decrease', data: a.id }) }}> - </button>
+                      onClick={() => { dispatch({ type: 'Qty decrease', data: a.id }) }}> - </button>
                   </td>
                 </tr>
               )
