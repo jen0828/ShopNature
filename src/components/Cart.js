@@ -1,5 +1,5 @@
 import { Table, Alert, Button } from 'react-bootstrap';
-import { connect, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 function Cart(props) {
 
@@ -26,9 +26,9 @@ function Cart(props) {
                   <td>{a.name}</td>
                   <td>{a.qty}</td>
                   <td>
-                    <button type="button" class="btn btn-success"
+                    <button type="button" className="btn btn-success"
                       onClick={() => { props.dispatch({ type: 'Qty increase', data: a.id }) }}> + </button>{' '}
-                    <button type="button" class="btn btn-success"
+                    <button type="button" className="btn btn-success"
                       onClick={() => { props.dispatch({ type: 'Qty decrease', data: a.id }) }}> - </button>
                   </td>
                 </tr>
