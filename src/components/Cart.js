@@ -1,7 +1,11 @@
 import { Table, Alert, Button } from 'react-bootstrap';
-import { connect } from 'react-redux';
+import { connect, useSelector } from 'react-redux';
 
 function Cart(props) {
+
+  let state = useSelector((state) => state)
+  console.log(state.reducer)
+
   return (
     <div>
       <div>
@@ -15,7 +19,7 @@ function Cart(props) {
             </tr>
           </thead>
           <tbody>
-            {props.state.map((a, i) => {
+            {state.reducer.map((a, i) => {
               return (
                 <tr key={i}>
                   <td>{a.id}</td>
@@ -44,12 +48,4 @@ function Cart(props) {
   )
 }
 
-function mapStateToProps(state) {
-  console.log(state)
-  return {
-    state: state.reducer,
-    alertOpen: state.reducer2,
-  }
-}
-
-export default connect(mapStateToProps)(Cart);
+export default Cart;
