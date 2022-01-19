@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+## ShopNature 🌿
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An e-commerce app built with React, Redux, JavaScript, JSON-server, Bootstrap and tested with Cypress.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Project Status
 
-### `npm start`
+ This is an ongoing solo project. The first version of the project(including MVP) is complete, and the addition of new features are in progress. The main features of V1 are : 
+ 
+ * Users can request products from an API ( currently created by JSON-server).
+ * Users can select/add multiple products and see them in their carts.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Demo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+https://user-images.githubusercontent.com/79845719/150128278-859232e6-752e-4924-bb10-7af888d7f9b2.mov
 
-### `npm test`
+## Screenshot
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* End to End Testing
 
-### `npm run build`
+![Screenshot 2022-01-17 at 18 34 13](https://user-images.githubusercontent.com/79845719/149985442-80692f86-f5d3-41fc-a9f3-b71cc08e3aa7.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation and Setup Instructions
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Installation:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+`npm install`  
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To Run Test Suite:  
 
-## Learn More
+`npm test` 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To Start JSON Server:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`npx json-server --watch data/db.json --port 8000`
 
-### Code Splitting
+To Start Server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+`npm start`  
 
-### Analyzing the Bundle Size
+To Visit App:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+`localhost:3000`  
 
-### Making a Progressive Web App
+## Reflection
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+ * This is a personal project. I created an e-commerce app for my friend who loves making organic cosmetics, and she would love to have her brand one day.
 
-### Advanced Configuration
+* I decided to use React library to upskill myself with React.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* New technologies: I tried to use new technologies as much as possible, and this is the first time I have used Redux and Cypress.
 
-### Deployment
+* Redux: I used Redux so all `components` can access `state` without using `props`. It took a while to set this up and understand new concepts such as `reducer` function and `dispatch()` method. I wouldn’t say it greatly benefited my project given its size. However, Redux would be very useful tool when working on a large-scale project with many components.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* Cypress: I have tried several testing frameworks for JS and Ruby, and I find front-end testing more challenging than back-end testing. However, I’m glad I tried Cypress, as testing the front-end app with Cypress was fun.
 
-### `npm run build` fails to minify
+* Next: My next task is to look into deploying this app with JSON-server.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ 
