@@ -30,7 +30,7 @@ function Cart(props) {
                     <button type="button" className="btn btn-success"
                       onClick={() => { dispatch({ type: 'Qty increase', data: a.id }) }}> + </button>{' '}
                     <button type="button" className="btn btn-success"
-                      onClick={() => { dispatch({ type: 'Qty decrease', data: a.id }) }}> - </button>
+                      onClick={() => { a.qty > 0 && dispatch({ type: 'Qty decrease', data: a.id }) }}> - </button>
                   </td>
                 </tr>
               )
