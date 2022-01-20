@@ -13,7 +13,7 @@ function ProductDetails(props) {
 
   let [alert, setAlert] = useState(true);
   useEffect(() => {
-    let timer = setTimeout(() => { setAlert(false) }, 3000);
+    let timer = setTimeout(() => { setAlert(false) }, 2000);
 
     return () => { clearTimeout(timer) }
   }, []);
@@ -33,7 +33,6 @@ function ProductDetails(props) {
             <div className="pt-5">
               <img src={myProduct.image} width="100%" alt='' />
               <h4>{myProduct.title}</h4>
-              {/* <p>{myProduct.content}</p> */}
               <p>{myProduct.price}</p>
 
               <button className="btn btn-secondary" onClick={() => {
