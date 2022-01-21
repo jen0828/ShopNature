@@ -15,6 +15,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 function App() {
 
   let [products, setProducts] = useState(Data);
+  let [showButton, setShowButton] = useState(true);
 
   return (
     <div className="App">
@@ -32,13 +33,18 @@ function App() {
             </div>
           </div>
 
-          <Button className="color" variant="outline-light" size="lg" onClick={() => {
+          {showButton && (
+            <Button className="color" variant="outline-light" size="lg" onClick={() => {
 
-            axios.get('http://localhost:8000/products')
-              .then((result) => { setProducts([...products, ...result.data]) })
-              .catch(() => { console.log('Errors!') })
-
-          }}>Click me to load more</Button>{' '}
+              axios.get('http://localhost:8000/products')
+                .then((result) => {
+                  setProducts([...products, ...result.data]);
+                  setShowButton(false)
+                })
+                .catch(() => { console.log('Errors!') })
+                
+            }}>Click me to load more</Button>
+          )}
 
         </Route>
         <Route exact path="/detail/:id">
