@@ -6,7 +6,7 @@ import Jumbotron from './components/Jumbotron';
 import './App.css';
 import { Button } from 'react-bootstrap';
 import React, { useState } from 'react';
-import Data from './data.js';
+import DATA from './data.js';
 import LearnMore from './components/LearnMore';
 import axios from 'axios';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -14,7 +14,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 function App() {
 
-  let [products, setProducts] = useState(Data);
+  let [products, setProducts] = useState(DATA);
   let [showButton, setShowButton] = useState(true);
 
   return (
