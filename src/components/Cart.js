@@ -1,7 +1,7 @@
 import { Table, Alert, Button } from 'react-bootstrap';
 import { useSelector, useDispatch } from 'react-redux';
 
-function Cart(props) {
+function Cart() {
 
   let state = useSelector((state) => state)
   console.log(state.reducer)
@@ -37,10 +37,11 @@ function Cart(props) {
             })}
           </tbody>
         </ Table>
-        {props.alertOpen === true
+        
+        {state.reducer2 === true
           ? (<Alert variant="success">
             <p>20% discount offer ends today</p>
-            <Button variant="success" onClick={() => { props.dispatch({ type: 'Close Alert' }) }}>Close me !</Button>
+            <Button variant="success" onClick={() => { dispatch({ type: 'Close Alert' }) }}>Close me !</Button>
           </Alert>)
           : null
         }

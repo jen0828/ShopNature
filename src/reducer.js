@@ -11,6 +11,7 @@ export default function reducer(state = initialState, action) {
     if (sameItemFinder >= 0) {
       let copy = [...state];
       copy[sameItemFinder].qty++
+      return copy
     } else {
       let copy = [...state];
       copy.push(action.data)
