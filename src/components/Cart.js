@@ -13,7 +13,7 @@ function Cart() {
         <Table responsive="sm">
           <thead>
             <tr>
-              <th>#</th>
+              <th>ID</th>
               <th>Product</th>
               <th>Quantity</th>
               <th>Qty Change</th>
@@ -28,16 +28,16 @@ function Cart() {
                   <td>{a.qty}</td>
                   <td>
                     <button type="button" className="btn btn-success"
-                      onClick={() => { dispatch({ type: 'Qty increase', data: a.id }) }}> + </button>{' '}
+                      onClick={() => { dispatch({ type: 'Qty increase', data: { id: a.id, name: a.name, qty: a.qty } }) }}> + </button>{' '}
                     <button type="button" className="btn btn-success"
-                      onClick={() => { a.qty > 0 && dispatch({ type: 'Qty decrease', data: a.id }) }}> - </button>
+                      onClick={() => { a.qty > 0 && dispatch({ type: 'Qty decrease', data: { id: a.id, name: a.name, qty: a.qty } }) }}> - </button>
                   </td>
                 </tr>
               )
             })}
           </tbody>
         </ Table>
-        
+
         {state.reducer2 === true
           ? (<Alert variant="success">
             <p>20% discount offer ends today</p>

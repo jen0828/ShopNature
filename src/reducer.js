@@ -1,6 +1,6 @@
 
-
 let initialState = [{ id: 0, name: 'DAILY RENEW FACIAL CREAM', qty: 1 }];
+
 
 export default function reducer(state = initialState, action) {
 
@@ -20,14 +20,18 @@ export default function reducer(state = initialState, action) {
 
   } else if (action.type === 'Qty increase') {
 
+    let sameItemFinder = state.findIndex((a) => { return a.id === action.data.id });
+
     let copy = [...state];
-    copy[action.data].qty++;
+    copy[sameItemFinder].qty++;
     return copy
 
   } else if (action.type === 'Qty decrease') {
 
+    let sameItemFinder = state.findIndex((a) => { return a.id === action.data.id });
+
     let copy = [...state];
-    copy[action.data].qty--;
+    copy[sameItemFinder].qty--;
     return copy
 
   } else {
