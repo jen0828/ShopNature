@@ -1,10 +1,15 @@
 import { Tabs, Tab } from 'react-bootstrap';
 import { useHistory, useParams } from 'react-router-dom';
 import React, { useState, useEffect } from 'react'
-import { connect } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import './ProductDetails.css';
 
 function ProductDetails(props) {
+
+  //let state = useSelector((state) => state);
+  //console.log(state)
+  let dispatch = useDispatch()
+
   let { id } = useParams();
   let history = useHistory();
   let myProduct = props.products.find(function (product) {
@@ -36,7 +41,7 @@ function ProductDetails(props) {
               <p>{myProduct.price}</p>
 
               <button className="btn btn-secondary" onClick={() => {
-                props.dispatch({ type: 'Add to Basket', data: { id: myProduct.id, name: myProduct.title, qty: 1 } })
+                dispatch({ type: 'Add to Basket', data: { id: myProduct.id, name: myProduct.title, qty: 1 } })
                 history.push('/cart');
 
               }}>Add to Cart</button>{' '}
@@ -72,12 +77,4 @@ function ProductDetails(props) {
   )
 }
 
-function mapStateToProps(state) {
-  console.log(state)
-  return {
-    state: state.reducer,
-    alertOpen: state.reducer2,
-  }
-}
-
-export default connect(mapStateToProps)(ProductDetails);
+export default ProductDetails;
