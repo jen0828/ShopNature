@@ -52,11 +52,11 @@ function App() {
         </Route>
 
         <Route path='/cart'>
-          <Cart></Cart>
+          <Cart/>
         </Route>
 
         <Route path='/learnmore'>
-          <LearnMore></LearnMore>
+          <LearnMore/>
         </Route>
       </Router>
 
