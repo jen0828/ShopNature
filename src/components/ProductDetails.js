@@ -6,16 +6,15 @@ import './ProductDetails.css';
 
 function ProductDetails(props) {
 
-  //let state = useSelector((state) => state);
-  //console.log(state)
-  let dispatch = useDispatch()
+  //console.log('props') // seed data - products
 
+  let dispatch = useDispatch()
   let { id } = useParams();
   let history = useHistory();
   let myProduct = props.products.find(function (product) {
     return product.id == id
   });
-
+  
   let [alert, setAlert] = useState(true);
   useEffect(() => {
     let timer = setTimeout(() => { setAlert(false) }, 2000);
