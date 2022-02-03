@@ -3,7 +3,7 @@ const Login = () => {
   return (
       <>
           {/* <!-- Button trigger modal --> */}
-          <button type="button" className="btn btn-outline-secondary ms-auto" data-bs-toggle="modal" data-bs-target="#loginModal">
+          <button type="button" className="btn btn-light ms-2" data-bs-toggle="modal" data-bs-target="#loginModal">
              <span className="fa fa-sign-in me-1"></span> Login
           </button>
 
@@ -33,7 +33,7 @@ const Login = () => {
                                   <input type="password" autoComplete="current-password" className="form-control" id="exampleInputPassword1"/>    
                               </div>    
                                       
-                                <button type="submit" className="btn btn-outline-secondary w-100 mt-5">Submit</button>
+                                <button type="submit" className="btn btn-outline-success w-100 mt-5">Submit</button>
                           </form>
                               </div>
                             </div>

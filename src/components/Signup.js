@@ -3,7 +3,7 @@ const Signup = () => {
   return (
       <div>
           {/* <!-- Button trigger modal --> */}
-          <button type="button" className="btn btn-outline-secondary ms-2" data-bs-toggle="modal" data-bs-target="#signupModal">
+          <button type="button" className="btn btn-light ms-2" data-bs-toggle="modal" data-bs-target="#signupModal">
               <span className="fa fa-user-plus me-1"></span> Signup
           </button>
 
@@ -40,7 +40,7 @@ const Signup = () => {
                                   <input type="checkbox" className="form-check-input" id="exampleCheck1" />
                                   <label className="form-check-label" htmlFor="exampleCheck1">Subscribe to our newsletter?</label>
                               </div>
-                              <button type="submit" className="btn btn-outline-secondary w-100 mt-5">SIGN UP</button>
+                              <button type="submit" className="btn btn-outline-success w-100 mt-5">SIGN UP</button>
                           </form>
                       </div>
                   </div>
