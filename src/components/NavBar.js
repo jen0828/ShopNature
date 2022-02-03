@@ -1,6 +1,7 @@
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Login from './Login.js';
+import Signup from './Signup.js';
 
 function NavBar() {
 
@@ -18,7 +19,8 @@ function NavBar() {
             </Nav>
             <Nav className="d-flex">
             <Login/>
-            <Nav.Link as={Link} to="/">Signup</Nav.Link>
+            <Signup/>
+            
             <Nav.Link as={Link} to="/cart">Cart</Nav.Link>
             </Nav> 
           </Navbar.Collapse>
