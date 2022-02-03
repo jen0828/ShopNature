@@ -20,8 +20,9 @@ function NavBar() {
             <Nav className="d-flex">
             <Login/>
             <Signup/>
-            
-            <Nav.Link as={Link} to="/cart">Cart</Nav.Link>
+            <Nav.Link as={Link} to="/cart" className="btn btn-outline-secondary ms-2">
+            <span className="fa fa-shopping-basket me-1"></span>0
+            </Nav.Link>
             </Nav> 
           </Navbar.Collapse>
         </Container>
