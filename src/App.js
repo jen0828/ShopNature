@@ -1,5 +1,6 @@
 import LoadMore from './components/LoadMore';
 import Cart from './components/Cart';
+import Contact from './components/Contact';
 import ProductCard from './components/ProductCard';
 import ProductDetails from './components/ProductDetails';
 import NavBar from './components/NavBar';
@@ -44,6 +45,10 @@ function App() {
 
         <Route path='/learnmore'>
           <LearnMore/>
+        </Route>
+
+        <Route path='/contact'>
+          <Contact/>
         </Route>
       </Router>
 
