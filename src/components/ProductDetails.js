@@ -16,9 +16,9 @@ function ProductDetails(props) {
   });
   
   let [alert, setAlert] = useState(true);
-  useEffect(() => {
-    let timer = setTimeout(() => { setAlert(false) }, 2000);
 
+  useEffect(() => {
+    let timer = setTimeout(() => { setAlert(false) }, 1000);
     return () => { clearTimeout(timer) }
   }, []);
 
