@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 function Cart() {
 
   let state = useSelector((state) => state)
-  console.log(state.reducer)
+  //console.log(state) // reducer & reducer2
   let dispatch = useDispatch()
 
   return (
