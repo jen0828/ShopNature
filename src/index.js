@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
+import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
 import { Provider } from 'react-redux';
 import reducer from './reducer.js';
 import reducer2 from './reducer2.js';
