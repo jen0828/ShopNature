@@ -1,21 +1,19 @@
+import LoadMore from './components/LoadMore';
 import Cart from './components/Cart';
 import ProductCard from './components/ProductCard';
 import ProductDetails from './components/ProductDetails';
 import NavBar from './components/NavBar';
 import Jumbotron from './components/Jumbotron';
 import './App.css';
-import { Button } from 'react-bootstrap';
 import React, { useState } from 'react';
 import DATA from './data.js';
 import LearnMore from './components/LearnMore';
-import axios from 'axios';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
 function App() {
 
   let [products, setProducts] = useState(DATA);
-  let [showButton, setShowButton] = useState(true);
 
   return (
     <div className="App">
@@ -33,18 +31,7 @@ function App() {
             </div>
           </div>
 
-          {showButton && (
-            <Button className="color" variant="outline-light" size="lg" onClick={() => {
-
-              axios.get('http://localhost:8000/products')
-                .then((result) => {
-                  setProducts([...products, ...result.data]);
-                  setShowButton(false)
-                })
-                .catch(() => { console.log('Errors!') })
-                
-            }}>Click me to load more</Button>
-          )}
+         < LoadMore products={products} setProducts={setProducts}/>
 
         </Route>
         <Route exact path="/detail/:id">
