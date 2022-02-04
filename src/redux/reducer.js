@@ -1,5 +1,5 @@
 
-let initialState = [{ id: 0, name: 'DAILY RENEW FACIAL CREAM', qty: 1 }];
+let initialState = [{ id: 0, name: 'DAILY RENEW FACIAL CREAM', qty: 0 }];
 
 
 export default function reducer(state = initialState, action) {
