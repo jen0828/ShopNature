@@ -9,7 +9,7 @@ import './App.css';
 import React, { useState } from 'react';
 import DATA from './data.js';
 import LearnMore from './components/LearnMore';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
     <div className="App">
       <Router>
         <NavBar />
+        <Switch>
         <Route exact path="/">
           <Jumbotron />
           <br></br>
@@ -31,27 +32,18 @@ function App() {
                 })};
             </div>
           </div>
-
-         < LoadMore products={products} setProducts={setProducts}/>
-
+          < LoadMore products={products} setProducts={setProducts}/>
         </Route>
+
         <Route exact path="/detail/:id">
           <ProductDetails products={products} />
         </Route>
 
-        <Route path='/cart'>
-          <Cart/>
-        </Route>
-
-        <Route path='/learnmore'>
-          <LearnMore/>
-        </Route>
-
-        <Route path='/contact'>
-          <Contact/>
-        </Route>
+        <Route exact path="/cart" component={Cart} />
+        <Route exact path="/learnmore" component={LearnMore} />
+        <Route exact path="/contact" component={Contact} />
+        </Switch>
       </Router>
-
     </div>
 
   )
