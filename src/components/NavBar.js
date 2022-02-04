@@ -2,6 +2,7 @@ import { Navbar, Container, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Login from './Login.js';
 import Signup from './Signup.js';
+import CartBtn from './CartBtn.js';
 
 function NavBar() {
 
@@ -20,9 +21,7 @@ function NavBar() {
             <Nav className="d-flex">
             <Login/>
             <Signup/>
-            <Nav.Link as={Link} to="/cart" className="btn btn-light ms-2">
-            <span className="fa fa-shopping-basket me-1"></span>0
-            </Nav.Link>
+            <CartBtn/>           
             </Nav> 
           </Navbar.Collapse>
         </Container>
