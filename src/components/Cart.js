@@ -1,5 +1,6 @@
 import { Table, Alert, Button } from 'react-bootstrap';
 import { useSelector, useDispatch } from 'react-redux';
+import { NavLink } from 'react-router-dom'
 
 function Cart() {
 
@@ -15,6 +16,7 @@ function Cart() {
             <tr>
               <th>ID</th>
               <th>Product</th>
+              <th>Price</th>
               <th>Quantity</th>
               <th>Qty Change</th>
             </tr>
@@ -25,6 +27,7 @@ function Cart() {
                 <tr key={i}>
                   <td>{a.id}</td>
                   <td>{a.name}</td>
+                  <td>£{a.price}.00</td>
                   <td>{a.qty}</td>
                   <td>
                     <button type="button" className="btn btn-success"
@@ -38,6 +41,24 @@ function Cart() {
           </tbody>
         </ Table>
 
+        {state.reducer.length === 0 && 
+        <div className="px-4 my-5 bg-light rounded-3 py-5">
+                <div className="container py-4">
+                    <div className="row">
+                        <h3>Your Cart is Empty</h3>
+                    </div>
+                    </div>
+                </div>
+        }
+        {state.reducer.length !== 0 && 
+            <div className="container">
+                <div class="col-12">
+                    <NavLink to="/checkout" className="btn btn-outline-dark mx-auto">Checkout</NavLink>
+                </div>
+            </div>
+        }
+<br></br>
+
         {state.reducer2 === true
           ? (<Alert variant="success">
             <p>20% discount offer ends today</p>
@@ -45,6 +66,7 @@ function Cart() {
           </Alert>)
           : null
         }
+          
       </div>
     </div>
   )

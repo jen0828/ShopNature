@@ -1,5 +1,7 @@
 
-let initialState = [{ id: 0, name: 'DAILY RENEW FACIAL CREAM', qty: 0 }];
+let initialState = [];
+
+//[{ id: 0, name: 'DAILY RENEW FACIAL CREAM', price: 0, qty: 0 }];
 
 
 export default function reducer(state = initialState, action) {

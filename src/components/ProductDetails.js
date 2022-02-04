@@ -37,10 +37,10 @@ function ProductDetails(props) {
             <div className="pt-5">
               <img src={myProduct.image} width="100%" alt='' />
               <h4>{myProduct.title}</h4>
-              <p>{myProduct.price}</p>
+              <p>£{myProduct.price}.00</p>
 
               <button className="btn btn-secondary" onClick={() => {
-                dispatch({ type: 'Add to Basket', data: { id: myProduct.id, name: myProduct.title, qty: 1 } })
+                dispatch({ type: 'Add to Basket', data: { id: myProduct.id, name: myProduct.title, price: myProduct.price, qty: 1 } })
                 history.push('/cart');
 
               }}>Add to Cart</button>{' '}

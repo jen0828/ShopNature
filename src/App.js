@@ -5,6 +5,7 @@ import ProductCard from './components/ProductCard';
 import ProductDetails from './components/ProductDetails';
 import NavBar from './components/NavBar';
 import Jumbotron from './components/Jumbotron';
+import Checkout from './components/Checkout'
 import './App.css';
 import React, { useState } from 'react';
 import DATA from './data.js';
@@ -40,6 +41,7 @@ function App() {
         </Route>
 
         <Route exact path="/cart" component={Cart} />
+        <Route exact path="/checkout" component={Checkout} />
         <Route exact path="/learnmore" component={LearnMore} />
         <Route exact path="/contact" component={Contact} />
         </Switch>
