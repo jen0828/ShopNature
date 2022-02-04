@@ -4,7 +4,7 @@ const Signup = () => {
       <div>
           {/* <!-- Button trigger modal --> */}
           <button type="button" className="btn btn-light ms-2" data-bs-toggle="modal" data-bs-target="#signupModal">
-              <span className="fa fa-user-plus me-1"></span> Signup
+              <span className="fa fa-user-plus me-1"></span> 
           </button>
 
           {/* <!-- Modal --> */}
@@ -16,10 +16,10 @@ const Signup = () => {
                           <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div className="modal-body">
-                          <button className="btn btn-secondary w-100 mb-4">
+                          <button className="btn btn-primary w-100 mb-4">
                               <span className="fa fa-google me-2"></span> Sign up With Google
                           </button>
-                          <button className="btn btn-secondary w-100 mb-4">
+                          <button className="btn btn-primary w-100 mb-4">
                               <span className="fa fa-facebook me-2"></span> Sign up With Facebook
                           </button>
                           <form>

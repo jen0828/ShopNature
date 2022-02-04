@@ -4,13 +4,13 @@ const Contact = () => {
           <div className="container mb-5">
               <div className="row">
                   <div className="col-12 text-center py-4 my-4">
-                      <h1>Have Some Questions?</h1>
+                      <h1>Contact Us</h1>
                       <hr />
                   </div>
               </div>
               <div className="row">
                   <div className="col-md 5 d-flex justify-content-center">
-                      <img src="/images/contact.jpg" alt="Contact Us" height="300px" width="300px" />
+                      <img src="/images/contact.jpg" alt="Contact Us" height="300px" width="400px" />
                   </div>
                   <div className="col-md-6">                          
                       <form >
@@ -26,7 +26,7 @@ const Contact = () => {
                                   <label htmlFor="exampleFormControlTextarea1" className="form-label">Message</label>
                                   <textarea className="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
                               </div>
-                              <button type="submit" className="btn btn-outline-primary">Send Message</button>
+                              <button type="submit" className="btn btn-outline-success">Send Message</button>
                       </form>
                   </div>
                   </div>
