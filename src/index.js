@@ -8,11 +8,7 @@ import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/font-awesome/css/font-awesome.min.css'
 import { Provider } from 'react-redux';
-import reducer from './reducer.js';
-import reducer2 from './reducer2.js';
-import {createStore, combineReducers} from 'redux';
-
-let store = createStore( combineReducers({reducer, reducer2}) )
+import store from './redux/store'
 
 ReactDOM.render(
   <React.StrictMode>
