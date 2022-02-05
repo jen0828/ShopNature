@@ -39,7 +39,7 @@ function Cart() {
                       onClick={() => { a.qty > 0 && dispatch({ type: 'Qty decrease', data: { id: a.id, name: a.name, price: a.price, qty: a.qty } }) }}> - </button>
                   </td> */}
                   <td>
-                  <button type="button" className="btn-close float-end" aria-label="Close"
+                  <button type="button" className="btn-close" aria-label="Close"
                       onClick={()=> { dispatch({ type: 'Delete item', data: { id: a.id, name: a.name, price: a.price, qty: a.qty }})}} ></button>
                   </td>
                 </tr>
