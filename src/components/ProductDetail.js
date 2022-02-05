@@ -1,19 +1,25 @@
 import { Tabs, Tab } from 'react-bootstrap';
 import { useHistory, useParams } from 'react-router-dom';
 import React, { useState, useEffect } from 'react'
-import { useDispatch } from 'react-redux';
-import './ProductDetails.css';
+import { useSelector, useDispatch } from 'react-redux';
+import './ProductDetail.css';
+import DATA from '../data.js';
 
-function ProductDetails(props) {
 
-  //console.log('props') // seed data - products
+function ProductDetail() {
 
+  let state = useSelector((state) => state)
+  //console.log('p-details page')
+  //console.log(state) 
   let dispatch = useDispatch()
   let { id } = useParams();
   let history = useHistory();
-  let myProduct = props.products.find(function (product) {
+  let myProduct = DATA.find(function (product) {
     return product.id == id
   });
+  //console.log('myProduct')
+  //console.log(myProduct) 
+  
   
   let [alert, setAlert] = useState(true);
 
@@ -76,4 +82,4 @@ function ProductDetails(props) {
   )
 }
 
-export default ProductDetails;
+export default ProductDetail;

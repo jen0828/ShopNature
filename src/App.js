@@ -2,7 +2,7 @@ import LoadMore from './components/LoadMore';
 import Cart from './components/Cart';
 import Contact from './components/Contact';
 import ProductCard from './components/ProductCard';
-import ProductDetails from './components/ProductDetails';
+import ProductDetail from './components/ProductDetail';
 import NavBar from './components/NavBar';
 import Jumbotron from './components/Jumbotron';
 import Checkout from './components/Checkout'
@@ -36,10 +36,7 @@ function App() {
           < LoadMore products={products} setProducts={setProducts}/>
         </Route>
 
-        <Route exact path="/detail/:id">
-          <ProductDetails products={products} />
-        </Route>
-
+        <Route exact path="/detail/:id" component={ProductDetail} />
         <Route exact path="/cart" component={Cart} />
         <Route exact path="/checkout" component={Checkout} />
         <Route exact path="/learnmore" component={LearnMore} />
