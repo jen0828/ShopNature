@@ -34,13 +34,13 @@ function Cart() {
                   <td>{a.qty}</td>
                   <td>
                     <button type="button" className="btn btn-success"
-                      onClick={() => { dispatch({ type: 'Qty increase', data: { id: a.id, name: a.name, qty: a.qty } }) }}> + </button>{' '}
+                      onClick={() => { dispatch({ type: 'Qty increase', data: { id: a.id, name: a.name, price: a.price, qty: a.qty } }) }}> + </button>{' '}
                     <button type="button" className="btn btn-success"
-                      onClick={() => { a.qty > 0 && dispatch({ type: 'Qty decrease', data: { id: a.id, name: a.name, qty: a.qty } }) }}> - </button>
+                      onClick={() => { a.qty > 0 && dispatch({ type: 'Qty decrease', data: { id: a.id, name: a.name, price: a.price, qty: a.qty } }) }}> - </button>
                   </td>
                   <td>
                   <button type="button" className="btn-close float-end" aria-label="Close"
-                      onClick={()=> { dispatch({ type: 'Delete item', data: { id: a.id, name: a.name, qty: a.qty }})}} ></button>
+                      onClick={()=> { dispatch({ type: 'Delete item', data: { id: a.id, name: a.name, price: a.price, qty: a.qty }})}} ></button>
                   </td>
                 </tr>
               )
@@ -80,3 +80,4 @@ function Cart() {
 }
 
 export default Cart;
+
