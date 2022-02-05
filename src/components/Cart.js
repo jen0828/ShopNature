@@ -20,7 +20,7 @@ function Cart() {
               <th>Product</th>
               <th>Price</th>
               <th>Quantity</th>
-              <th>Qty Change</th>
+              {/* <th>Qty Change</th> */}
               <th>Delete</th>
             </tr>
           </thead>
@@ -32,12 +32,12 @@ function Cart() {
                   <td>{a.name}</td>
                   <td>£{a.price}.00</td>
                   <td>{a.qty}</td>
-                  <td>
+                  {/* <td>
                     <button type="button" className="btn btn-success"
                       onClick={() => { dispatch({ type: 'Qty increase', data: { id: a.id, name: a.name, price: a.price, qty: a.qty } }) }}> + </button>{' '}
                     <button type="button" className="btn btn-success"
                       onClick={() => { a.qty > 0 && dispatch({ type: 'Qty decrease', data: { id: a.id, name: a.name, price: a.price, qty: a.qty } }) }}> - </button>
-                  </td>
+                  </td> */}
                   <td>
                   <button type="button" className="btn-close float-end" aria-label="Close"
                       onClick={()=> { dispatch({ type: 'Delete item', data: { id: a.id, name: a.name, price: a.price, qty: a.qty }})}} ></button>
