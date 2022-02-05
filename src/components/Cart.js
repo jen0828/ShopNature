@@ -52,7 +52,7 @@ function Cart() {
         }
         {state.reducer.length !== 0 && 
             <div className="container">
-                <div class="col-12">
+                <div className="col-12">
                     <NavLink to="/checkout" className="btn btn-outline-dark mx-auto">Checkout</NavLink>
                 </div>
             </div>
