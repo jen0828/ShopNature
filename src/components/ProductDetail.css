@@ -1,3 +1,7 @@
+ul.mb-3.nav.nav-tabs {
+  margin: 16px ;
+}
+
 .my-alert {
   background : #eeeeee;
   padding : 15px;
@@ -9,3 +13,4 @@
 .my-alert p {
   margin-bottom : 0;
 }
+
