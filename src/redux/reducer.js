@@ -1,7 +1,6 @@
 
 let initialState = [];
 
-//[{ id: 0, name: 'DAILY RENEW FACIAL CREAM', price: 0, qty: 0 }];
 
 
 export default function reducer(state = initialState, action) {
@@ -13,6 +12,7 @@ export default function reducer(state = initialState, action) {
     if (sameItemFinder >= 0) {
       let copy = [...state];
       copy[sameItemFinder].qty++
+      copy[sameItemFinder].price += action.data.price
       return copy
     } else {
       let copy = [...state];
