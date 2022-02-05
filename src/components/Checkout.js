@@ -8,7 +8,7 @@ const Checkout = () => {
     const itemList = (item) => {
         total = total + item.price;
         return (
-            <li className="list-group-item d-flex justify-content-between lh-sm">
+            <li className="list-group-item d-flex justify-content-between lh-sm" key={item.id}>
                 <div>
                     <h6 className="my-0">{item.name}</h6>
                 </div>
