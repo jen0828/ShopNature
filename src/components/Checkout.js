@@ -44,11 +44,11 @@ const Checkout = () => {
                     </div>
                     <div className="col-md-7 col-lg-8">
                         <h4 className="mb-3">Billing address</h4>
-                        <form className="needs-validation" novalidate="">
+                        <form className="needs-validation" noValidate="">
                             <div className="row g-3">
                                 <div className="col-sm-6">
                                     <label htmlFor="firstName" className="form-label">First name</label>
-                                    <input type="text" className="form-control" id="firstName" placeholder="" value="" required="" />
+                                    <input type="text" className="form-control" id="firstName" placeholder="" defaultValue="" required="" />
                                     <div className="invalid-feedback">
                                         Valid first name is required.
                                     </div>
@@ -56,7 +56,7 @@ const Checkout = () => {
 
                                 <div className="col-sm-6">
                                     <label htmlFor="lastName" className="form-label">Last name</label>
-                                    <input type="text" className="form-control" id="lastName" placeholder="" value="" required="" />
+                                    <input type="text" className="form-control" id="lastName" placeholder="" defaultValue="" required="" />
                                     <div className="invalid-feedback">
                                         Valid last name is required.
                                     </div>
@@ -143,7 +143,7 @@ const Checkout = () => {
 
                             <div className="my-3">
                                 <div className="form-check">
-                                    <input id="credit" name="paymentMethod" type="radio" className="form-check-input" checked="" required="" />
+                                    <input id="credit" name="paymentMethod" type="radio" className="form-check-input" defaultChecked="" required="" />
                                     <label className="form-check-label" htmlFor="credit">Credit card</label>
                                 </div>
                                 <div className="form-check">
