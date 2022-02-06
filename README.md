@@ -1,6 +1,6 @@
 ## ShopNature 🌿
 
-An e-commerce app built with React, Redux, JavaScript, JSON-server, Bootstrap and tested with Cypress.
+An e-commerce app built with React, Redux, JavaScript, JSON-server, Axios, Bootstrap and tested with Cypress.
 
 
 ## Project Demo
@@ -55,4 +55,6 @@ To Visit App:
 
 * Next: My next task is to look into deploying this app with JSON-server.
 
- 
+## Live on Netlify
+
+Click here: https://shopnature.netlify.app/
