@@ -3,16 +3,10 @@
 An e-commerce app built with React, Redux, JavaScript, JSON-server, Bootstrap and tested with Cypress.
 
 
-## Project Status
-
- This is an ongoing solo project. The first version of the project(including MVP) is complete, and the addition of new features are in progress. The main features of V1 are : 
- 
- * Users can request products from an API ( currently created by JSON-server).
- * Users can select/add multiple products and see them in their carts.
-
 ## Project Demo
 
-https://user-images.githubusercontent.com/79845719/150128278-859232e6-752e-4924-bb10-7af888d7f9b2.mov
+https://user-images.githubusercontent.com/79845719/152675452-f07942e6-fafc-4297-94a6-c8718184a8cc.mov
+
 
 ## Screenshot
 
