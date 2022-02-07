@@ -12,7 +12,7 @@ export default function LoadMore(props) {
 {showButton && (
             <Button className="color" variant="outline-light" size="lg" onClick={() => {
 
-              axios.get('http://localhost:8000/products')
+              axios.get('https://my-json-server.typicode.com/jen0828/db/products')
                 .then((result) => {
                   props.setProducts([...props.products, ...result.data]);
                   setShowButton(false)
@@ -23,3 +23,4 @@ export default function LoadMore(props) {
           )}
   </div>;
 }
+
