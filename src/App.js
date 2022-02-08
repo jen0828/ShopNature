@@ -35,8 +35,10 @@ function App() {
           </div>
           < LoadMore products={products} setProducts={setProducts}/>
         </Route>
-
-        <Route exact path="/detail/:id" component={ProductDetail} />
+        <Route exact path="/detail/:id">
+          <ProductDetail products={products} />
+        </Route>
+        
         <Route exact path="/cart" component={Cart} />
         <Route exact path="/about" component={LearnMore} />
         <Route exact path="/contact" component={Contact} />

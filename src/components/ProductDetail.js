@@ -1,25 +1,18 @@
 import { Tabs, Tab } from 'react-bootstrap';
 import { useHistory, useParams } from 'react-router-dom';
 import React, { useState, useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux';
 import './ProductDetail.css';
-import DATA from '../data.js';
+import { useDispatch } from 'react-redux';
 
 
-function ProductDetail() {
+function ProductDetail(props) {
 
-  let state = useSelector((state) => state)
-  //console.log('p-details page')
-  //console.log(state) 
   let dispatch = useDispatch()
   let { id } = useParams();
   let history = useHistory();
-  let myProduct = DATA.find(function (product) {
+  let myProduct = props.products.find(function (product) {
     return product.id == id
   });
-  //console.log('myProduct')
-  //console.log(myProduct) 
-  
   
   let [alert, setAlert] = useState(true);
 
