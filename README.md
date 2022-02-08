@@ -2,8 +2,9 @@
 
 An e-commerce app built with React, Redux, JavaScript, JSON-server, Axios, Bootstrap and tested with Cypress.
 
+A fake online API was created using JSON-server for the deployed application [see here](https://github.com/jen0828/db)
 
-## Project Demo
+## Demo
 
 https://user-images.githubusercontent.com/79845719/152675452-f07942e6-fafc-4297-94a6-c8718184a8cc.mov
 
@@ -29,10 +30,6 @@ To Run Test Suite:
 
 `npm test` 
 
-To Start JSON Server:
-
-`npx json-server --watch data/db.json --port 8000`
-
 To Start Server:
 
 `npm start`  
@@ -53,7 +50,9 @@ To Visit App:
 
 * Cypress: I have tried several testing frameworks for JS and Ruby, and I find front-end testing more challenging than back-end testing. However, I’m glad I tried Cypress, as testing the front-end app with Cypress was fun.
 
-* Next: My next task is to look into deploying this app with JSON-server.
+* Next: 
+
+  - [x] My next task is to look into deploying this app with JSON-server.
 
 ## Live on Netlify
 
