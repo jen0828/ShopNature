@@ -1,9 +1,14 @@
 
 const Signup = () => {
+
+  const navStyle = {
+    color: 'grey'
+    };
+
   return (
       <div>
           {/* <!-- Button trigger modal --> */}
-          <button type="button" className="btn btn-light ms-2" data-bs-toggle="modal" data-bs-target="#signupModal">
+          <button style={navStyle} type="button" className="btn btn-light ms-2" data-bs-toggle="modal" data-bs-target="#signupModal">
               <span className="fa fa-user-plus me-1"></span> 
           </button>
 

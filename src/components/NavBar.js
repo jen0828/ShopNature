@@ -6,11 +6,15 @@ import CartBtn from './CartBtn.js';
 
 function NavBar() {
 
+  const navStyle = {
+    color: 'grey'
+    };
+
   return (
     <div>
       <Navbar bg="light" expand="lg">
         <Container>
-          <Navbar.Brand href="#home">Natural Skincare</Navbar.Brand>
+          <Navbar.Brand style={navStyle} href="#home">Natural Skincare</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
