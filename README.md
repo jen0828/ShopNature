@@ -26,17 +26,21 @@ Installation:
 
 `npm install`  
 
-To Run Test Suite:  
-
-`npm test` 
-
 To Start Server:
 
 `npm start`  
 
 To Visit App:
 
-`localhost:3000`  
+`localhost:3000`
+
+To Install Cypress: 
+
+`npm install --save-dev cypress`
+
+To Run Cypress: 
+
+`npx cypress open` 
 
 ## Reflection
 
