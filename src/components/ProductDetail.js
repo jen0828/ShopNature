@@ -21,6 +21,13 @@ function ProductDetail(props) {
     return () => { clearTimeout(timer) }
   }, []);
 
+  const updateBtn = () => {
+    let btnEl = document.querySelector('#upload-btn')
+    btnEl.style.backgroundColor = 'green'
+    btnEl.style.color = 'white'
+    btnEl.innerText = 'Added to Cart!'
+  }
+
   return (
     <div>
       <div className="container">
@@ -38,9 +45,9 @@ function ProductDetail(props) {
               <h4>{myProduct.title}</h4>
               <p>£{myProduct.price}.00</p>
 
-              <button className="btn btn-secondary" onClick={() => {
+              <button id='upload-btn' className="btn btn-secondary" onClick={() => {
                 dispatch({ type: 'Add to Basket', data: { id: myProduct.id, name: myProduct.title, price: myProduct.price, qty: 1 } })
-
+                updateBtn();
               }}>Add to Cart</button>{' '}
 
               <button onClick={() => { history.goBack() }} className="btn btn-secondary">Go back</button>
