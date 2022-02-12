@@ -13,8 +13,7 @@ https://user-images.githubusercontent.com/79845719/152675452-f07942e6-fafc-4297-
 
 * End to End Testing
 
-![Screenshot 2022-01-17 at 18 34 13](https://user-images.githubusercontent.com/79845719/149985442-80692f86-f5d3-41fc-a9f3-b71cc08e3aa7.png)
-
+![e2e](https://user-images.githubusercontent.com/79845719/153711764-01853b25-735b-432a-bf90-83b37d90f073.gif)
 
 
 ## Installation and Setup Instructions
