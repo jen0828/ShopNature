@@ -9,7 +9,6 @@ function Cart() {
   //console.log(state) // reducer & reducer2
   let dispatch = useDispatch()
 
-
   return (
     <div>
       <div>
@@ -20,7 +19,7 @@ function Cart() {
               <th>Product</th>
               <th>Price</th>
               <th>Quantity</th>
-              {/* <th>Qty Change</th> */}
+              <th>Qty Change</th>
               <th>Delete</th>
             </tr>
           </thead>
@@ -32,15 +31,17 @@ function Cart() {
                   <td>{a.name}</td>
                   <td>£{a.price}.00</td>
                   <td>{a.qty}</td>
-                  {/* <td>
-                    <button type="button" className="btn btn-success"
-                      onClick={() => { dispatch({ type: 'Qty increase', data: { id: a.id, name: a.name, price: a.price, qty: a.qty } }) }}> + </button>{' '}
-                    <button type="button" className="btn btn-success"
-                      onClick={() => { a.qty > 0 && dispatch({ type: 'Qty decrease', data: { id: a.id, name: a.name, price: a.price, qty: a.qty } }) }}> - </button>
-                  </td> */}
                   <td>
+                   <div className="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" className="btn btn-outline-success"
+                    onClick={() => { dispatch({ type: 'Qty increase', data: { id: a.id, name: a.name, price: a.price, qty: a.qty } }) }}>+</button>
+                    <button type="button" className="btn btn-outline-success"
+                    onClick={() => { a.qty > 0 && dispatch({ type: 'Qty decrease', data: { id: a.id, name: a.name, price: a.price, qty: a.qty } }) }}>-</button>
+                   </div> 
+                  </td>
+                   <td>
                   <button type="button" className="btn-close" aria-label="Close"
-                      onClick={()=> { dispatch({ type: 'Delete item', data: { id: a.id, name: a.name, price: a.price, qty: a.qty }})}} ></button>
+                    onClick={()=> { dispatch({ type: 'Delete item', data: { id: a.id, name: a.name, price: a.price, qty: a.qty }})}} ></button>
                   </td>
                 </tr>
               )
@@ -54,8 +55,8 @@ function Cart() {
                     <div className="row">
                         <h3>Your Cart is Empty</h3>
                     </div>
-                    </div>
                 </div>
+        </div>
         }
         {state.reducer.length !== 0 && 
             <div className="container">
