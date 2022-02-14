@@ -43,7 +43,7 @@ To Run Cypress:
 
 ## Reflection
 
- * This is a personal project. I created an e-commerce app for my friend who loves making organic cosmetics, and she would love to have her brand one day.
+ * This is an ongoing personal project. I created an e-commerce app for my friend who loves making organic cosmetics, and she would love to have her brand one day.
 
 * I decided to use React library to upskill myself with React.
 
