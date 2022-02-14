@@ -27,15 +27,16 @@ export default function reducer(state = initialState, action) {
 
     let copy = [...state];
     copy[sameItemFinder].qty++;
-    copy[sameItemFinder].price += action.data.price;
+    let oneItemPrice = (action.data.price)/(action.data.qty);
+    copy[sameItemFinder].price += oneItemPrice;
     return copy
 
   } else if (action.type === 'Qty decrease') {
 
     let copy = [...state];
     copy[sameItemFinder].qty--;
-    let oneItemPrice = (action.data.price)/(action.data.qty)
-    copy[sameItemFinder].price -= oneItemPrice
+    let oneItemPrice = (action.data.price)/(action.data.qty);
+    copy[sameItemFinder].price -= oneItemPrice;
     return copy
 
   } else {
