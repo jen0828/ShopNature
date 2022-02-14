@@ -67,13 +67,13 @@ function Cart() {
         }
 <br></br>
 
-        {state.reducer2 === true
+        {/* {state.reducer2 === true
           ? (<Alert variant="success">
             <p>20% discount offer ends today</p>
             <Button variant="success" onClick={() => { dispatch({ type: 'Close Alert' }) }}>Close me !</Button>
           </Alert>)
           : null
-        }
+        } */}
           
       </div>
     </div>
