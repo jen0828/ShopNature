@@ -12,6 +12,24 @@
   text-align: center;
 }
 
+@media screen and (max-width: 414px) {
+  table{
+    font-size: 0.7rem;
+  }
+  img.product-card{
+    width: 90%;
+  }
+  .col-md-4{
+    font-size: 90%
+  }
+  h5.title{
+    font-size: 98%
+  }
+  p.content{
+    margin: 6px;
+  }
+}
+
 .jumbotron{
   background-image: url('./main-image.jpg');
   background-size: cover;

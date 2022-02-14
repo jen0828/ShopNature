@@ -42,7 +42,7 @@ function ProductDetail(props) {
           <div className="col-md-6 mt-4">
             <div className="pt-5">
               <img src={myProduct.image} width="100%" alt='' />
-              <h4>{myProduct.title}</h4>
+              <h5 className='title'>{myProduct.title}</h5>
               <p>£{myProduct.price}.00</p>
 
               <button id='upload-btn' className="btn btn-secondary" onClick={() => {
