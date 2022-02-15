@@ -34,7 +34,7 @@ function Cart() {
                   <td>
                    <div className="btn-group" role="group" aria-label="Basic example">
                     <button type="button" className="btn btn-outline-success"
-                    onClick={() => { dispatch({ type: 'Qty increase', data: { id: a.id, name: a.name, price: a.price, qty: a.qty } }) }}>+</button>
+                    onClick={() => { a.qty > 0 && dispatch({ type: 'Qty increase', data: { id: a.id, name: a.name, price: a.price, qty: a.qty } }) }}>+</button>
                     <button type="button" className="btn btn-outline-success"
                     onClick={() => { a.qty > 0 && dispatch({ type: 'Qty decrease', data: { id: a.id, name: a.name, price: a.price, qty: a.qty } }) }}>-</button>
                    </div> 
