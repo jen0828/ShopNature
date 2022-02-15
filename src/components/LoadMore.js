@@ -3,24 +3,31 @@ import axios from 'axios';
 import React, { useState } from 'react';
 
 export default function LoadMore(props) {
-  //console.log(props) // products & setProducts
-  
-  let [showButton, setShowButton] = useState(true);
+	//console.log(props) // products & setProducts
 
-  return <div>
+	let [showButton, setShowButton] = useState(true);
 
-{showButton && (
-            <Button className="color" variant="outline-light" size="lg" onClick={() => {
-
-              axios.get('https://my-json-server.typicode.com/jen0828/db/products')
-                .then((result) => {
-                  props.setProducts([...props.products, ...result.data]);
-                  setShowButton(false)
-                })
-                .catch(() => { console.log('Errors!') })
-                
-            }}>Click me to load more</Button>
-          )}
-  </div>;
+	return (
+		<div>
+			{showButton && (
+				<Button
+					className="color"
+					variant="outline-light"
+					size="lg"
+					onClick={() => {
+						axios
+							.get('https://my-json-server.typicode.com/jen0828/db/products')
+							.then((result) => {
+								props.setProducts([...props.products, ...result.data]);
+								setShowButton(false);
+							})
+							.catch(() => {
+								console.log('Errors!');
+							});
+					}}>
+					Click me to load more
+				</Button>
+			)}
+		</div>
+	);
 }
-
