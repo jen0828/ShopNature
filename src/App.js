@@ -13,38 +13,38 @@ import LearnMore from './components/LearnMore';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
-	let [products, setProducts] = useState(DATA);
+  let [products, setProducts] = useState(DATA);
 
-	return (
-		<div className="App">
-			<Router>
-				<NavBar />
-				<Switch>
-					<Route exact path="/">
-						<Jumbotron />
-						<br></br>
-						<div className="container">
-							<div className="row">
-								{products.map((a, i) => {
-									return <ProductCard products={products[i]} i={i} key={i} />;
-								})}
-								;
-							</div>
-						</div>
-						<LoadMore products={products} setProducts={setProducts} />
-					</Route>
-					<Route exact path="/detail/:id">
-						<ProductDetail products={products} />
-					</Route>
+  return (
+    <div className="App">
+      <Router>
+        <NavBar />
+        <Switch>
+          <Route exact path="/">
+            <Jumbotron />
+            <br></br>
+            <div className="container">
+              <div className="row">
+                {products.map((a, i) => {
+                  return <ProductCard products={products[i]} i={i} key={i} />;
+                })}
+                ;
+              </div>
+            </div>
+            <LoadMore products={products} setProducts={setProducts} />
+          </Route>
+          <Route exact path="/detail/:id">
+            <ProductDetail products={products} />
+          </Route>
 
-					<Route exact path="/cart" component={Cart} />
-					<Route exact path="/about" component={LearnMore} />
-					<Route exact path="/contact" component={Contact} />
-					<Route exact path="/checkout" component={Checkout} />
-				</Switch>
-			</Router>
-		</div>
-	);
+          <Route exact path="/cart" component={Cart} />
+          <Route exact path="/about" component={LearnMore} />
+          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/checkout" component={Checkout} />
+        </Switch>
+      </Router>
+    </div>
+  );
 }
 
 export default App;
