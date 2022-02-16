@@ -9,7 +9,7 @@ function ProductDetail(props) {
   let { id } = useParams();
   let history = useHistory();
   let myProduct = props.products.find(function (product) {
-    return product.id == id;
+    return product.id === parseInt(id);
   });
 
   let [alert, setAlert] = useState(true);
