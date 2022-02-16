@@ -10,12 +10,7 @@ import './App.css';
 import React, { useState } from 'react';
 import DATA from './data.js';
 import LearnMore from './components/LearnMore';
-import {
-	BrowserRouter as Router,
-	Route,
-	Switch,
-	Redirect,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
 	let [products, setProducts] = useState(DATA);
@@ -46,7 +41,6 @@ function App() {
 					<Route exact path="/about" component={LearnMore} />
 					<Route exact path="/contact" component={Contact} />
 					<Route exact path="/checkout" component={Checkout} />
-					<Redirect to="/" />
 				</Switch>
 			</Router>
 		</div>
