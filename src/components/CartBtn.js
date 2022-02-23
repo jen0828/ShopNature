@@ -7,7 +7,6 @@ const CartBtn = () => {
   };
 
   const state = useSelector((state) => state.reducer);
-  console.log(state);
   return (
     <>
       <NavLink style={navStyle} to="/cart" className="btn btn-light ms-2">

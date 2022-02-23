@@ -3,7 +3,6 @@ import axios from 'axios';
 import React, { useState } from 'react';
 
 export default function LoadMore(props) {
-  //console.log(props) // products & setProducts
 
   let [showButton, setShowButton] = useState(true);
 

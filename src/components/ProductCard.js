@@ -1,7 +1,6 @@
 import { useHistory } from 'react-router-dom';
 
 export default function ProductCard(props) {
-  //console.log(props) // products in DATA
 
   let history = useHistory();
   return (
