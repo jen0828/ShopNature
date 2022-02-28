@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 
 const Checkout = () => {
-  const state = useSelector((state) => state.reducer);
+  const state = useSelector((state) => state);
 
   let total = 0;
   const itemList = (item) => {

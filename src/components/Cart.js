@@ -21,7 +21,7 @@ function Cart() {
             </tr>
           </thead>
           <tbody>
-            {state.reducer.map((a, i) => {
+            {state.map((a, i) => {
               return (
                 <tr key={i}>
                   <td>{a.id}</td>
@@ -92,7 +92,7 @@ function Cart() {
           </tbody>
         </Table>
 
-        {state.reducer.length === 0 && (
+        {state.length === 0 && (
           <div className="px-4 my-5 bg-light rounded-3 py-5">
             <div className="container py-4">
               <div className="row">
@@ -101,7 +101,7 @@ function Cart() {
             </div>
           </div>
         )}
-        {state.reducer.length !== 0 && (
+        {state.length !== 0 && (
           <div className="container">
             <div className="col-12">
               <NavLink to="/checkout" className="btn btn-outline-dark mx-auto">
@@ -112,13 +112,6 @@ function Cart() {
         )}
         <br></br>
 
-        {/* {state.reducer2 === true
-          ? (<Alert variant="success">
-            <p>20% discount offer ends today</p>
-            <Button variant="success" onClick={() => { dispatch({ type: 'Close Alert' }) }}>Close me !</Button>
-          </Alert>)
-          : null
-        } */}
       </div>
     </div>
   );
