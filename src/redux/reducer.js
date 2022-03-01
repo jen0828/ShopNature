@@ -1,8 +1,8 @@
 let initialState = [];
 
 export default function reducer(state = initialState, action) {
-  let sameItemFinder = state.findIndex((a) => {
-    return a.id === action.data.id;
+  let sameItemFinder = state.findIndex((item) => {
+    return item.id === action.data.id;
   });
 
   switch (action.type) {
@@ -19,8 +19,8 @@ export default function reducer(state = initialState, action) {
       }
 
     case 'Delete item':
-      return (state = state.filter((x) => {
-        return x.id !== action.data.id;
+      return (state = state.filter((item) => {
+        return item.id !== action.data.id;
       }));
 
     case 'Qty increase':

@@ -21,13 +21,13 @@ function Cart() {
             </tr>
           </thead>
           <tbody>
-            {state.map((a, i) => {
+            {state.map((item, i) => {
               return (
                 <tr key={i}>
-                  <td>{a.id}</td>
-                  <td>{a.name}</td>
-                  <td>£{a.price}.00</td>
-                  <td>{a.qty}</td>
+                  <td>{item.id}</td>
+                  <td>{item.name}</td>
+                  <td>£{item.price}.00</td>
+                  <td>{item.qty}</td>
                   <td>
                     <div
                       className="btn-group"
@@ -37,14 +37,14 @@ function Cart() {
                         type="button"
                         className="btn btn-outline-success"
                         onClick={() => {
-                          a.qty > 0 &&
+                          item.qty > 0 &&
                             dispatch({
                               type: 'Qty increase',
                               data: {
-                                id: a.id,
-                                name: a.name,
-                                price: a.price,
-                                qty: a.qty,
+                                id: item.id,
+                                name: item.name,
+                                price: item.price,
+                                qty: item.qty,
                               },
                             });
                         }}>
@@ -54,14 +54,14 @@ function Cart() {
                         type="button"
                         className="btn btn-outline-success"
                         onClick={() => {
-                          a.qty > 0 &&
+                          item.qty > 0 &&
                             dispatch({
                               type: 'Qty decrease',
                               data: {
-                                id: a.id,
-                                name: a.name,
-                                price: a.price,
-                                qty: a.qty,
+                                id: item.id,
+                                name: item.name,
+                                price: item.price,
+                                qty: item.qty,
                               },
                             });
                         }}>
@@ -78,10 +78,10 @@ function Cart() {
                         dispatch({
                           type: 'Delete item',
                           data: {
-                            id: a.id,
-                            name: a.name,
-                            price: a.price,
-                            qty: a.qty,
+                            id: item.id,
+                            name: item.name,
+                            price: item.price,
+                            qty: item.qty,
                           },
                         });
                       }}></button>
@@ -111,7 +111,6 @@ function Cart() {
           </div>
         )}
         <br></br>
-
       </div>
     </div>
   );

@@ -11,7 +11,7 @@ const CartBtn = () => {
     <>
       <NavLink style={navStyle} to="/cart" className="btn btn-light ms-2">
         <span className="fa fa-shopping-basket me-1"></span>
-        {state.map((a) => a.qty).reduce((prev, curr) => prev + curr, 0)}
+        {state.map((item) => item.qty).reduce((prev, curr) => prev + curr, 0)}
       </NavLink>
     </>
   );
