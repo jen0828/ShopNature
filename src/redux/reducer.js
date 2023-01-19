@@ -1,43 +1,57 @@
 let initialState = [];
 
 export default function reducer(state = initialState, action) {
-  let sameItemFinder = state.findIndex((item) => {
-    return item.id === action.data.id;
-  });
-
   switch (action.type) {
     case 'Add to Basket':
-      if (sameItemFinder >= 0) {
-        let copy = [...state];
-        copy[sameItemFinder].qty++;
-        copy[sameItemFinder].price += action.data.price;
-        return copy;
-      } else {
-        let copyItem = [...state];
-        copyItem.push(action.data);
-        return copyItem;
-      }
-
+      return addToBasket(state, action);
     case 'Delete item':
-      return (state = state.filter((item) => {
-        return item.id !== action.data.id;
-      }));
-
+      return deleteItem(state, action);
     case 'Qty increase':
-      let copy = [...state];
-      copy[sameItemFinder].qty++;
-      let oneItemPrice = action.data.price / action.data.qty;
-      copy[sameItemFinder].price += oneItemPrice;
-      return copy;
-
+      return qtyIncrease(state, action);
     case 'Qty decrease':
-      let copy2 = [...state];
-      copy2[sameItemFinder].qty--;
-      let oneItemPrice2 = action.data.price / action.data.qty;
-      copy2[sameItemFinder].price -= oneItemPrice2;
-      return copy2;
-
+      return qtyDecrease(state, action);
     default:
       return state;
   }
+}
+
+function findItemIndex(state, action) {
+  return state.findIndex((item) => item.id === action.data.id);
+}
+
+function addToBasket(state, action) {
+  let sameItemFinder = findItemIndex(state, action);
+
+  if (sameItemFinder >= 0) {
+    let copy = [...state];
+    copy[sameItemFinder].qty++;
+    copy[sameItemFinder].price += action.data.price;
+    return copy;
+  } else {
+    let copyItem = [...state];
+    copyItem.push(action.data);
+    return copyItem;
+  }
+}
+
+function deleteItem(state, action) {
+  return state.filter((item) => item.id !== action.data.id);
+}
+
+function qtyIncrease(state, action) {
+  let sameItemFinder = findItemIndex(state, action);
+  let copy = [...state];
+  copy[sameItemFinder].qty++;
+  let oneItemPrice = action.data.price / action.data.qty;
+  copy[sameItemFinder].price += oneItemPrice;
+  return copy;
+}
+
+function qtyDecrease(state, action) {
+  let sameItemFinder = findItemIndex(state, action);
+  let copy = [...state];
+  copy[sameItemFinder].qty--;
+  let oneItemPrice = action.data.price / action.data.qty;
+  copy[sameItemFinder].price -= oneItemPrice;
+  return copy;
 }
